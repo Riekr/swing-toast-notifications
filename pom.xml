@@ -6,7 +6,7 @@
 
     <groupId>raven.toast</groupId>
     <artifactId>swing-toast-notifications</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5r</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -17,12 +17,12 @@
         <dependency>
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf</artifactId>
-            <version>3.4.1</version>
+            <version>3.6.1</version>
         </dependency>
         <dependency>
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf-extras</artifactId>
-            <version>3.4.1</version>
+            <version>3.6.1</version>
         </dependency>
     </dependencies>
 </project>

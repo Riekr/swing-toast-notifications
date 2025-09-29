@@ -11,6 +11,7 @@ import com.formdev.flatlaf.util.LoggingFacade;
 import com.formdev.flatlaf.util.UIScale;
 
 import static raven.toast.ToastClientProperties.*;
+import static raven.toast.util.UIUtils.tryTranslucent;
 
 import raven.toast.util.UIUtils;
 
@@ -105,7 +106,7 @@ public class ToastPanelUI extends BasicPanelUI implements StyleableUI, PropertyC
         effectWidth = FlatUIUtils.getUIFloat(prefix + ".effectWidth", 0.5f);
         effectOpacity = FlatUIUtils.getUIFloat(prefix + ".effectOpacity", 0.2f);
         effectAlignment = UIUtils.getString(prefix + ".effectAlignment", "left");
-        p.setBackground(FlatUIUtils.getUIColor(prefix + ".background", "Panel.background"));
+	      tryTranslucent(FlatUIUtils.getUIColor(prefix + ".background", "Panel.background"), p::setBackground);
         p.setBorder(createDefaultBorder());
         LookAndFeel.installProperty(p, "opaque", false);
     }

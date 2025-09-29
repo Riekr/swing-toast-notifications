@@ -1,12 +1,14 @@
 package raven.toast.ui;
 
+import static raven.toast.util.UIUtils.tryTranslucent;
+
+import javax.swing.*;
+import java.awt.*;
+
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import raven.toast.Notifications;
 import raven.toast.ToastClientProperties;
-
-import javax.swing.*;
-import java.awt.*;
 
 public class ToastNotificationPanel extends JPanel {
 
@@ -24,12 +26,12 @@ public class ToastNotificationPanel extends JPanel {
         String key = getKey();
         String outlineColor = toTextColor(getDefaultColor());
         String outline = convertsKey(key, "outlineColor", outlineColor);
-        putClientProperty(FlatClientProperties.STYLE, "" +
+        putClientProperty(FlatClientProperties.STYLE,
                 "background:" + convertsKey(key, "background", "$Panel.background") + ";" +
                 "outlineColor:" + outline + ";" +
                 "effectColor:" + convertsKey(key, "effectColor", outline));
 
-        textPane.putClientProperty(FlatClientProperties.STYLE, "" +
+        textPane.putClientProperty(FlatClientProperties.STYLE,
                 "foreground:" + convertsKey(getKey(), "foreground", "$TextPane.foreground") + ";");
     }
 
@@ -46,7 +48,7 @@ public class ToastNotificationPanel extends JPanel {
     private void removeDialogBackground() {
         if (window != null) {
             Color bg = getBackground();
-            window.setBackground(new Color(bg.getRed(), bg.getGreen(), bg.getBlue(), 0));
+						tryTranslucent(new Color(bg.getRed(), bg.getGreen(), bg.getBlue(), 0), window::setBackground);
             window.setSize(getPreferredSize());
         }
     }

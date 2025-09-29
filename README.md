@@ -7,15 +7,15 @@ This swing toast notifications use for java desktop application gui swing with f
 
 ## Install
 
-This library not available in maven, try use jar file, by copy to the root project `/library/swing-toast-notifications-1.0.3.jar`
+This library not available in maven, try use jar file, by copy to the root project `/library/swing-toast-notifications-1.0.5r.jar`
 
 ``` xml
 <dependency>
     <groupId>raven.toast</groupId>
     <artifactId>swing-toast-notifications</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.5r</version>
     <scope>system</scope>
-    <systemPath>${basedir}/library/swing-toast-notifications-1.0.3.jar</systemPath>
+    <systemPath>${basedir}/library/swing-toast-notifications-1.0.5r.jar</systemPath>
 </dependency>
 ```
 - Other library are use with this library
@@ -160,6 +160,8 @@ Visit flatlaf for more
 - [Flatlaf documentation](https://www.formdev.com/flatlaf/customizing/)
 
 ### Update Note
+- `version 1.0.5r`
+  - Workaround "PERPIXEL_TRANSLUCENT" errors in remote desktop
 - `version 1.0.1`
   - add properties `Toast.maximumWidth`
   - add properties `Toast.limit`

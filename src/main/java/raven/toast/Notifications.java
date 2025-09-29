@@ -1,5 +1,7 @@
 package raven.toast;
 
+import static raven.toast.util.UIUtils.tryTranslucent;
+
 import com.formdev.flatlaf.ui.FlatUIUtils;
 import com.formdev.flatlaf.util.Animator;
 import com.formdev.flatlaf.util.UIScale;
@@ -292,7 +294,7 @@ public class Notifications {
             this.location = location;
             this.duration = duration;
             window = new JWindow(frame);
-            window.setBackground(new Color(0, 0, 0, 0));
+	          tryTranslucent(new Color(0, 0, 0, 0), window::setBackground);
             window.setContentPane(component);
             window.setFocusableWindowState(false);
             window.setSize(component.getPreferredSize());
