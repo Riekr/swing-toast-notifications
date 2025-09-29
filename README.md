@@ -1,5 +1,7 @@
 # Swing-Toast-Notifications
 
+This repository has been forked from [DJ-Raven](https://github.com/DJ-Raven/swing-toast-notifications)'s one for applying some quick fix.
+
 This swing toast notifications use for java desktop application gui swing with flatlaf
 
 <img src="https://github.com/DJ-Raven/swing-toast-notifications/assets/58245926/71965d6a-1fd1-4ab4-b2d7-f7424b9c277e" alt="sample dark" width="450"/>
